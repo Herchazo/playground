@@ -1,0 +1,39 @@
+<html>
+    <head>
+        <title>Hola Pepe</title>
+        <link rel='stylesheet' type='text/css' href="style.css" />
+    </head>
+    <script type="text/javascript">
+        setTimeout(function () {
+            const h1 = document.querySelector('h1')
+
+            const colors = ['red', 'blue', 'green', 'black', 'pink']
+            
+            const max = 5
+            let times = 0
+
+            const valorOriginal = h1.innerHTML
+            
+            setInterval(function () {
+                // Reset contador
+                if (times >= max) {
+                    h1.innerHTML = valorOriginal    
+                    times = 0
+                }
+
+                // Modifica el element
+                h1.innerHTML += '!'
+                
+                let color = colors[times]
+                h1.style = `color:${color} `
+
+                // Incrementar contador
+                times += 1
+            }, 150)
+        }, 100)
+    </script>
+    <body>
+        <h1>Hola Eric</h1>
+        <h2>No quiero que me abandones jamás</h2>
+    </body>
+</html>
