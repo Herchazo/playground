@@ -8,3 +8,7 @@ h1 {
     color: blue;
     font-weight: 500;
 }
+
+.alert-custom {
+    margin: 100px;
+}

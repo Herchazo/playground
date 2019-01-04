@@ -2,38 +2,66 @@
     <head>
         <title>Hola Pepe</title>
         <link rel='stylesheet' type='text/css' href="style.css" />
-    </head>
-    <script type="text/javascript">
-        setTimeout(function () {
-            const h1 = document.querySelector('h1')
+        <link href="https://getbootstrap.com/docs/4.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
 
-            const colors = ['red', 'blue', 'green', 'black', 'pink']
-            
-            const max = 5
-            let times = 0
-
-            const valorOriginal = h1.innerHTML
-            
-            setInterval(function () {
-                // Reset contador
-                if (times >= max) {
-                    h1.innerHTML = valorOriginal    
-                    times = 0
-                }
-
-                // Modifica el element
-                h1.innerHTML += '!'
+        <script type="text/javascript">
+            setTimeout(function () {
+                const h1 = document.querySelector('h1')
+    
+                const colors = ['red', 'blue', 'green', 'black', 'pink']
                 
-                let color = colors[times]
-                h1.style = `color:${color} `
-
-                // Incrementar contador
-                times += 1
-            }, 150)
-        }, 100)
-    </script>
+                const max = 5
+                let times = 0
+    
+                const valorOriginal = h1.innerHTML
+                
+                setInterval(function () {
+                    // Reset contador
+                    if (times >= max) {
+                        h1.innerHTML = valorOriginal    
+                        times = 0
+                    }
+    
+                    // Modifica el element
+                    h1.innerHTML += '!'
+                    
+                    let color = colors[times]
+                    h1.style = `color:${color} `
+    
+                    // Incrementar contador
+                    times += 1
+                }, 150)
+            }, 100)
+        </script>
+    </head>
     <body>
         <h1>Hola Eric</h1>
-        <h2>No quiero que me abandones jamás</h2>
+        <!-- <button type="button" class="btn btn-outline-warning">Warning</button> -->
+
+        <button type="button" class="btn btn-primary btn-lg">Large button</button>
+        <button type="button" class="btn btn-secondary btn-lg">Large button</button>
+
+        <div class="alert-custom">
+            <div class="alert alert-primary" role="alert">
+                A simple primary alert—check it out!
+            </div>
+
+            <form method="POST" action="/form" enctype="application/x-www-form-urlencoded">
+                <div class="form-group">
+                    <label for="exampleInputEmail1">Email address</label>
+                    <input type="email" name="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+                    <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+                </div>
+                <div class="form-group">
+                    <label for="exampleInputPassword1">Password</label>
+                    <input type="password" name="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+                </div>
+                <div class="form-group form-check">
+                    <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                    <label class="form-check-label" for="exampleCheck1">Check me out</label>
+                </div>
+                <button type="submit" class="btn btn-primary">Submit</button>
+            </form>
+        </div>
     </body>
 </html>
